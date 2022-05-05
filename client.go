@@ -8,7 +8,7 @@ import (
 
 // Client is SSM client.
 type Client struct {
-	client *ssm.SSM
+	ssmClient *ssm.SSM
 }
 
 // New creates a client.
