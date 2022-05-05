@@ -1,4 +1,4 @@
-package ssmparm
+package ssmparam
 
 import (
 	"errors"

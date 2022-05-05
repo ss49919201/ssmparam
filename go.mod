@@ -1,4 +1,4 @@
-module github.com/s-beats/ssmparm
+module github.com/s-beats/ssmparam
 
 go 1.18
 
