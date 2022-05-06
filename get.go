@@ -24,7 +24,7 @@ func (c *Client) GetParameter(name string) (*Parameter, error) {
 		return nil, ErrParameterNotFound
 	}
 
-	return NewParmeter(*op.Parameter.Name, *op.Parameter.Value), nil
+	return NewParameter(*op.Parameter.Name, *op.Parameter.Value), nil
 }
 
 func (c *Client) GetParametersByPath(path string) (*ParameterCollection, error) {
@@ -43,7 +43,7 @@ func (c *Client) GetParametersByPath(path string) (*ParameterCollection, error) 
 		}
 
 		for _, v := range op.Parameters {
-			parmeters = append(parmeters, NewParmeter(*v.Name, *v.Value))
+			parmeters = append(parmeters, NewParameter(*v.Name, *v.Value))
 		}
 
 		if op.NextToken == nil {
