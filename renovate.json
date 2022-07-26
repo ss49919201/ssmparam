@@ -1,0 +1,9 @@
+{
+  "baseBranches": [
+    "release"
+  ],
+  "postUpdateOptions": ["gomodTidy"],
+  "extends": [
+    "config:base"
+  ]
+}
