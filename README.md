@@ -1,3 +1,3 @@
 # ssmparam
 
-AWS Systems Manager Parameter Store.
+This package is wrapper for AWS Systems Manager Parameter Store.
