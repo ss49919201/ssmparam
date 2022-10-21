@@ -46,5 +46,5 @@ func (p *ParameterCollection) Parameter(name string) *Parameter {
 
 // Parameters returns all Parameter.
 func (p *ParameterCollection) Parameters() []*Parameter {
-	return p.Parameters()
+	return p.parmeters
 }
