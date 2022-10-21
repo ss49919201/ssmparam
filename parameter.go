@@ -34,8 +34,8 @@ func NewParameterCollection(parameters []*Parameter) *ParameterCollection {
 	return &ParameterCollection{parameters}
 }
 
-// Parameter returns Parameter by name.
-func (p *ParameterCollection) Parameter(name string) *Parameter {
+// FirstByName returns first parameter that match given name.
+func (p *ParameterCollection) FirstByName(name string) *Parameter {
 	for _, v := range p.parmeters {
 		if v.name == name {
 			return v
