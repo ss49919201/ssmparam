@@ -37,5 +37,24 @@ func TestPrameters(t *testing.T) {
 			{name: "name", value: "value-copy"},
 			{name: "name2", value: "value2"},
 		},
-		collection.Parameters())
+		collection.Parameters(),
+	)
+}
+
+func TestParameterCollection_Filter(t *testing.T) {
+	collection := &ParameterCollection{parmeters: []*Parameter{
+		{name: "name", value: "value"},
+		{name: "name", value: "value-copy"},
+		{name: "name2", value: "value2"},
+	}}
+
+	callback := func(p *Parameter) bool {
+		return p.name == "name"
+	}
+
+	assert.Equal(
+		t,
+		[]*Parameter{{name: "name", value: "value"}, {name: "name", value: "value-copy"}},
+		collection.Filter(callback),
+	)
 }

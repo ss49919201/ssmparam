@@ -48,3 +48,14 @@ func (p *ParameterCollection) FirstByName(name string) *Parameter {
 func (p *ParameterCollection) Parameters() []*Parameter {
 	return p.parmeters
 }
+
+// Filter returns filterd slice of Parameter.
+func (p *ParameterCollection) Filter(callback func(*Parameter) bool) []*Parameter {
+	var filtered []*Parameter
+	for _, v := range p.parmeters {
+		if callback(v) {
+			filtered = append(filtered, v)
+		}
+	}
+	return filtered
+}
