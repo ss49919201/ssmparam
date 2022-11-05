@@ -3,8 +3,8 @@ module github.com/s-beats/ssmparam
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go v1.44.120
-	github.com/stretchr/testify v1.8.0
+	github.com/aws/aws-sdk-go v1.44.127
+	github.com/stretchr/testify v1.8.1
 )
 
 require (
